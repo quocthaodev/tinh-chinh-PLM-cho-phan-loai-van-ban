@@ -13,9 +13,8 @@ def clear_memory():
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
-# =====================================================================
 # PHẦN 1: TẢI VÀ LƯU MÔ HÌNH FINBERT
-# =====================================================================
+
 print("\n" + "="*50)
 print("PHẦN 1: TẢI VÀ LƯU MÔ HÌNH FINBERT")
 print("="*50)
@@ -38,10 +37,8 @@ print(f"Tuyệt vời! Mô hình đã được lưu an toàn tại: {save_path}"
 del model_p1, tokenizer_p1
 clear_memory()
 
-
-# =====================================================================
 # PHẦN 2: HUẤN LUYỆN BERT CƠ BẢN VỚI LORA
-# =====================================================================
+
 print("\n" + "="*50)
 print("PHẦN 2: HUẤN LUYỆN BERT VỚI LORA")
 print("="*50)
@@ -106,10 +103,8 @@ trainer_p2.train()
 del model_p2, tokenizer_p2, trainer_p2
 clear_memory()
 
-
-# =====================================================================
 # PHẦN 3: FULL FINE-TUNING FINBERT
-# =====================================================================
+
 print("\n" + "="*50)
 print("PHẦN 3: FULL FINE-TUNING FINBERT")
 print("="*50)
